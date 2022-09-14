@@ -1,37 +1,27 @@
-import type{ NavItems } from './types'
+import type { NavItems } from "./types";
 
 export const NAV_ITEMS: NavItems = {
-    home: {
-        path: '/',
-        title: 'home'
-    },
-    blog: {
-        path: '/blog',
-        title: 'blog'
-    },
-    tags: {
-        path: '/tags',
-        title: 'tags'
-    },
-    media: {
-        path: '/media',
-        title: 'media'
-    },
-    about: {
-        path: '/about',
-        title: 'about'
-    }
-}
+  home: {
+    path: "/",
+    title: "home",
+  },
+  blog: {
+    path: "/blog",
+    title: "blog",
+  },
+  about: {
+    path: "/about",
+    title: "about",
+  },
+};
 
 export const SITE = {
-    // Your site's detail?
-    name: 'Ink',
-    title: 'Astro - Ink',
-    description: 'Crisp, minimal, personal blog theme for Astro',
-    url: 'https://astro-ink.vercel.app',
-    githubUrl: 'https://github.com/one-aalam/astro-ink',
-    listDrafts: true
-    // description ?
-}
+  name: "RH",
+  title: "Rani Horev",
+  description: "Just a random blog",
+  url: "https://ranihorev.com",
+  githubUrl: "https://github.com/ranihorev",
+  listDrafts: false,
+};
 
-export const PAGE_SIZE = 8
+export const PAGE_SIZE = 8;

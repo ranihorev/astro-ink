@@ -15,10 +15,10 @@
       "checkJs": true,
       "baseUrl": ".",
       "paths": {
-        "$components": ["./src/components"],
-        "$": ["./src"]
+        "$components/*": ["src/components/*"],
+        "$layouts/*": ["src/layouts/*"],
       },
-      "types": ["astro/env"]
+      "types": ["astro/env", "astro/client"]
     },
-    "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts"],
+    "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.astro"],
 }
