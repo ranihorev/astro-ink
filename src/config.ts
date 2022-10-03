@@ -16,11 +16,11 @@ export const NAV_ITEMS: NavItems = {
 };
 
 export const SITE = {
-  name: "RH",
+  name: "Rani",
   title: "Rani Horev",
-  description: "Just a random blog",
+  description: "Random thoughts",
   url: "https://ranihorev.com",
-  githubUrl: "https://github.com/ranihorev",
+  githubUrl: "https://github.com/ranihorev/blog",
   listDrafts: false,
 };
 
