@@ -4,6 +4,7 @@ import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
+import NetlifyCMS from "astro-netlify-cms";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -27,6 +28,31 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
   },
   integrations: [
     mdx(),
+    NetlifyCMS({
+      config: {
+        backend: {
+          name: "git-gateway",
+          branch: "main",
+        },
+        collections: [
+          {
+            name: "posts",
+            label: "Blog Posts",
+            folder: "src/pages/blog",
+            create: true,
+            delete: true,
+            fields: [
+              { name: "layout", widget: "string", label: "Layout", default: "$/layouts/post.astro" },
+              { name: "title", widget: "string", label: "Title" },
+              { name: "description", widget: "string", label: "Description", required: false },
+              { name: "date", widget: "datetime", label: "Date" },
+              { name: "tags", widget: "list", label: "Tags", required: false, allow_add: true },
+              { name: "body", widget: "markdown", label: "Body" },
+            ],
+          },
+        ],
+      },
+    }),
     svelte(),
     tailwind({
       config: {

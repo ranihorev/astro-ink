@@ -23,6 +23,7 @@
     "@tailwindcss/typography": "^0.5.7",
     "@types/node": "^18.7.14",
     "astro": "1.1.7",
+    "astro-netlify-cms": "^0.2.3",
     "globby": "^13.1.2",
     "gray-matter": "^4.0.3",
     "lunr": "^2.3.9",
